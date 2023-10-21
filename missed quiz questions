@@ -1,0 +1,110 @@
+What C# data type is represented by the following number? 10.0m
+
+anwser: decimal
+
+If you want to write a single-line comment, what symbol must you include before the comment begins?
+
+anwser: // 
+
+If you are expecting values of 52, 53, and 54, how would you group these cases together as one case to cover all three values?
+
+anwser:
+
+case 52;
+case 53;
+case 54;
+Console.WriteLine("theVal is between 52 and 54");
+
+What string formatting should you implement to output a value using the local currency format with a precision of 3?
+
+anwser: {0:C3}
+
+Clementia needs to parse String objects with exception handling. Which statement should she include in her code?
+
+anwser: TryParse
+
+How to assign a default value to a function parameter?
+
+anwser: assign a value to the parameters when the function is defined
+
+If you create an object instance from a class, what do you use to access the object's fields?
+
+anwser: dot syntax
+Explanation: array syntax is specific to arrays. Array indexes are numeric, and accessing individual elements requires square brackets. 
+
+
+Protected means - method or class member can be accessed only by code within the class or a subclass
+
+Example:
+
+class A {
+  public void fnA1();
+  public void fnA2();
+  public void fnA3();
+}
+class Program {
+  Static void Main() {
+    A clsa = new A();
+    clsa.fnA1();
+    clsa.fnA2(); // ERROR BECAUSE PROTECTED ISN'T AVAILABLE IN ANOTHER CLASS
+    clsa.fnA3(); // ERROR BECAUSE ONLY AVAILABLE IN CLASS A
+class B:A {
+  fnB1();
+  fnA1();
+  fnA2(); // works because b is a subclass of class a
+  fnA3(); // only works inside of class A, so still error
+}
+
+//increment and decrement operators
+x++; // adds one from an integer
+y--; // subtracts one from an integer
+
+
+
+Console.WriteLine(x > y && y >= 5); // prints a boolean
+
+
+
+string str = null;
+Console.WriteLine(str ?? "Unknown String");
+
+output: "Unknown String"
+Explanation: if str is null, then the value to the right of the ?? gets assigned to String. Otherwise, if str was not previously null, str keeps it's original value aka to the left of ??, so ?? is a shorthand way of writing an if else statement
+
+
+//Another example:
+
+string str = "hello";
+Console.WriteLine(str ?? "Unknown string ");
+str ?? "New String";
+Console.WriteLine(str);
+
+output: hello
+        hello
+
+//data types in C#
+float f = 2.0f;
+decimal d = 10.0m;
+char c = 'c';
+
+//compiler will figure out if integer or string:
+var x = 10;
+var z = "Hello";
+
+//Arrays in C#
+int[] vals = new int [5];
+string[] strs = {"one", "two", "three"}; // auto assigning values to the array as we are defining it
+
+//Implicit conversion between types
+long bignum;
+bignum = i; // this works because i is an integer, but since they are both integer types, I can implicitly convert between int and long types
+
+//Explicit conversion between types
+float i_to_f = (float) i; // to type cast in C#, we use the parenthesis notation wrapped around the data type 
+console.WriteLine("{0}, i_to_f);
+
+int f_to_i = (int) f;
+Console.WriteLine("{0}". f_to_i);
+
+output: 10
+        2 // because 2.0 to 2 
